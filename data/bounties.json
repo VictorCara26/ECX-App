@@ -1,0 +1,50 @@
+{
+  "bounties": [
+    {
+      "id": "bnt_101",
+      "title": "Translate the split guide into Korean",
+      "category": "Translation",
+      "description": "Translate the eCash split and bridge guide into Korean for our community launch.",
+      "priceEcx": 75,
+      "sponsor": "@ecash",
+      "deadline": "5 days left",
+      "status": "Open",
+      "conditions": [
+        "Translate the full guide (~3,000 words)",
+        "Keep terminology consistent (ECX, split, bridge, Drivechains)",
+        "Deliver as Markdown (.md) or PDF",
+        "Include a short list of key terms (EN -> KO)"
+      ]
+    },
+    {
+      "id": "bnt_102",
+      "title": "Make a Drivechains explainer",
+      "category": "Video",
+      "description": "Create a clear, 5-8 minute video explaining what Drivechains are and how they work on eCash.",
+      "priceEcx": 250,
+      "sponsor": "@paulfan",
+      "deadline": "2 days left",
+      "status": "Open",
+      "conditions": [
+        "1080p minimum resolution with clear voiceover",
+        "Include animated diagram of sidechain peg mechanics",
+        "Publish openly with CC-BY license"
+      ]
+    },
+    {
+      "id": "bnt_103",
+      "title": "Reproduce a wallet sync bug",
+      "category": "Development",
+      "description": "Isolate and submit a reproducible test case for mobile SPV header sync stalls.",
+      "priceEcx": 500,
+      "sponsor": "@ecashdev",
+      "deadline": "7 days left",
+      "status": "Open",
+      "conditions": [
+        "Provide step-by-step reproduction logs",
+        "Include packet capture or node console output",
+        "Verify on latest testnet release"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "poolEcx": 14280,
+  "activeBattle": {
+    "id": "CLASH #408",
+    "timeLeft": "01:42:19",
+    "contenderA": {
+      "creator": "@doge_lord",
+      "caption": "0-FEE INSTANT ECX",
+      "votes": 1284
+    },
+    "contenderB": {
+      "creator": "@satoshi_x",
+      "caption": "WHEN TX CONFIRMS IN 1S",
+      "votes": 722
+    }
+  },
+  "leaderboard": [
+    { "rank": 1, "handle": "@doge_lord", "earnedEcx": 4820 },
+    { "rank": 2, "handle": "@pixel_pepe", "earnedEcx": 3410 },
+    { "rank": 3, "handle": "@ecx_wizard", "earnedEcx": 2190 }
+  ]
+}

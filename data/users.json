@@ -1,0 +1,44 @@
+{
+  "activeUserId": "usr_default_01",
+  "users": [
+    {
+      "id": "usr_default_01",
+      "username": "@goblin_dev",
+      "displayName": "Goblin Dev",
+      "email": "goblin@ecash.network",
+      "bio": "Full-stack builder, translator, and bounty hunter on the eCash (ECX) blockchain.",
+      "avatar": "goblin",
+      "avatarUrl": "",
+      "socials": {
+        "twitter": "@goblin_dev",
+        "github": "github.com/goblin-dev",
+        "telegram": "@goblin_ecx",
+        "discord": "goblin_dev#0404",
+        "website": "https://e.cash"
+      },
+      "wallet": {
+        "address": "ecash:qp8f4a92c1e7b03d56f81294a0c3e7d19b4a8f20c1",
+        "seedPhrase": "amber horizon copper goblin beacon ledger quantum fortress crystal spark summit zenith",
+        "balanceEcx": 1250,
+        "origin": "Generated on Sign-Up",
+        "createdAt": "2026-11-19T16:00:00.000Z",
+        "transactions": [
+          {
+            "txid": "0x9a3f...7c2e",
+            "type": "Bounty Payout: Korean Split Guide",
+            "amount": 75,
+            "direction": "in",
+            "timestamp": "2026-11-19T14:27:00.000Z"
+          },
+          {
+            "txid": "0x4b1c...89d0",
+            "type": "Initial ECX Deposit",
+            "amount": 1175,
+            "direction": "in",
+            "timestamp": "2026-11-18T10:15:00.000Z"
+          }
+        ]
+      }
+    }
+  ]
+}

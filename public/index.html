@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCash (ECX) — Consumer App Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient-grid"></div>
+  <div class="particles-layer" id="particles"></div>
+
+  <!-- Top Ecosystem Command Bar -->
+  <header class="top-command-bar">
+    <div class="command-brand">
+      <svg width="26" height="26" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="27" stroke="#FFB52D" stroke-width="5" stroke-dasharray="138 32" stroke-linecap="round"/>
+        <circle cx="32" cy="32" r="17" stroke="#F2A51A" stroke-width="4.5" stroke-dasharray="84 26" stroke-linecap="round"/>
+        <path d="M12 32H38" stroke="#FFB52D" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <span>eCash Ecosystem</span>
+    </div>
+
+    <nav class="command-nav" aria-label="Primary Controls">
+      <button type="button" class="nav-pill active" data-modal-target="none">Ecosystem View</button>
+      <button type="button" class="nav-pill" data-modal-target="bountyModal">Bounty Board</button>
+      <button type="button" class="nav-pill" data-modal-target="walletModal">On-Site Wallet</button>
+      <button type="button" class="nav-pill" data-modal-target="profileModal">User Profile</button>
+    </nav>
+
+    <div class="command-user-status">
+      <div class="wallet-balance-chip" id="headerWalletChip" data-modal-target="walletModal">
+        <span class="chip-dot"></span>
+        <span id="headerBalanceText">1,250 ECX</span>
+      </div>
+      <button type="button" class="profile-chip" id="headerProfileChip" data-modal-target="profileModal">
+        <span class="profile-chip-avatar" id="headerAvatarBadge">G</span>
+        <span id="headerUsernameText">@goblin_dev</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="ecosystem-stage">
+    <!-- ==================== TOP ROW: MEMEWARS & BOUNTY GOBLINS ==================== -->
+    <section class="top-row">
+      <!-- APPLICATION 1: MEMEWARS (TOP LEFT) -->
+      <article class="app-showcase" id="app-memewars">
+        <div class="app-header">
+          <div class="app-brand-group">
+            <div class="app-mini-kicker">eCash Social Arena</div>
+            <h2 class="app-title">MEMEWARS</h2>
+            <p class="app-tagline">Create. Remix. Battle. Earn ECX.</p>
+          </div>
+          <div class="ecx-pill" id="memePoolPill">14,280 ECX Pool</div>
+        </div>
+
+        <div class="memewars-body">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-status">
+                <span>9:41</span>
+                <div class="dynamic-island"></div>
+                <span>5G</span>
+              </div>
+
+              <div class="meme-nav-tabs" id="memeTabs">
+                <button type="button" class="meme-tab active" data-tab="Battle Feed">Battle Feed</button>
+                <button type="button" class="meme-tab" data-tab="Create">Create</button>
+                <button type="button" class="meme-tab" data-tab="Remix">Remix</button>
+                <button type="button" class="meme-tab" data-tab="Leaderboard">Leaderboard</button>
+              </div>
+
+              <div class="meme-battle-stage">
+                <div class="battle-meta-row">
+                  <span class="live-badge" id="battleTitle">LIVE CLASH #408</span>
+                  <span class="mono-muted" id="battleTimer">01:42:19 left</span>
+                </div>
+
+                <div class="battle-arena-grid">
+                  <div class="meme-contender">
+                    <div class="meme-art-box art-amber">
+                      <svg width="68" height="68" viewBox="0 0 80 80">
+                        <circle cx="40" cy="42" r="24" fill="#F2A51A"/>
+                        <polygon points="20,26 26,10 35,22" fill="#D98212"/>
+                        <polygon points="60,26 54,10 45,22" fill="#D98212"/>
+                        <ellipse cx="40" cy="48" rx="12" ry="9" fill="#F4E6D0"/>
+                        <circle cx="40" cy="45" r="3.5" fill="#14110F"/>
+                        <rect x="23" y="34" width="14" height="6" fill="#14110F"/>
+                        <rect x="43" y="34" width="14" height="6" fill="#14110F"/>
+                        <rect x="37" y="35" width="6" height="2" fill="#14110F"/>
+                      </svg>
+                      <div class="meme-caption-overlay" id="memeCaptionA">0-FEE INSTANT ECX</div>
+                    </div>
+                    <div class="meme-creator-row">
+                      <span class="creator-tag"><span class="avatar-dot">D</span><span id="memeCreatorA">@doge_lord</span></span>
+                      <span class="gold-bold" id="memeShareA">64%</span>
+                    </div>
+                  </div>
+
+                  <div class="vs-badge">VS</div>
+
+                  <div class="meme-contender">
+                    <div class="meme-art-box art-copper">
+                      <svg width="68" height="68" viewBox="0 0 80 80">
+                        <rect x="22" y="20" width="36" height="38" rx="14" fill="#8D4A22" stroke="#FFB52D" stroke-width="2"/>
+                        <circle cx="33" cy="36" r="4" fill="#FFB52D"/>
+                        <circle cx="47" cy="36" r="4" fill="#FFB52D"/>
+                        <path d="M30 48 Q40 55 50 48" stroke="#F4E6D0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                      </svg>
+                      <div class="meme-caption-overlay" id="memeCaptionB">WHEN TX CONFIRMS IN 1S</div>
+                    </div>
+                    <div class="meme-creator-row">
+                      <span class="creator-tag"><span class="avatar-dot">S</span><span id="memeCreatorB">@satoshi_x</span></span>
+                      <span class="sand-bold" id="memeShareB">36%</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vote-meter-wrap">
+                  <div class="vote-pct-labels">
+                    <span class="gold-bold" id="votePctLeft">64% (1,284)</span>
+                    <span class="sand-bold" id="votePctRight">36% (722)</span>
+                  </div>
+                  <div class="vote-bar-track">
+                    <div class="vote-bar-left" id="voteBarLeft"></div>
+                    <div class="vote-bar-right" id="voteBarRight"></div>
+                  </div>
+                </div>
+
+                <div class="meme-actions-row">
+                  <button type="button" class="btn-gold" id="btnVoteMeme">Vote Meme (+2 ECX)</button>
+                  <button type="button" class="btn-outline-amber" id="btnTipMeme">Tip 25 ECX</button>
+                </div>
+
+                <div class="meme-social-strip">
+                  <span>892 Fires</span>
+                  <span>148 Comments</span>
+                  <span>Share</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="memewars-side-column">
+            <div class="mascot-card">
+              <svg width="74" height="74" viewBox="0 0 100 100" class="mascot-svg">
+                <polygon points="22,34 28,10 42,26" fill="#F2A51A" stroke="#F4E6D0" stroke-width="1.5"/>
+                <polygon points="78,34 72,10 58,26" fill="#F2A51A" stroke="#F4E6D0" stroke-width="1.5"/>
+                <ellipse cx="50" cy="54" rx="32" ry="29" fill="#F2A51A" stroke="#FFB52D" stroke-width="1.5"/>
+                <ellipse cx="50" cy="63" rx="18" ry="13" fill="#F4E6D0"/>
+                <ellipse cx="50" cy="58" rx="5.5" ry="4" fill="#14110F"/>
+                <path d="M43 66 Q50 72 57 66" stroke="#14110F" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                <rect x="20" y="42" width="60" height="4" fill="#14110F"/>
+                <rect x="24" y="46" width="22" height="10" fill="#14110F"/>
+                <rect x="54" y="46" width="22" height="10" fill="#14110F"/>
+                <rect x="27" y="48" width="4" height="3" fill="#F4E6D0"/>
+                <rect x="57" y="48" width="4" height="3" fill="#F4E6D0"/>
+              </svg>
+              <div>
+                <div class="kicker-xs">CHAMPION MASCOT</div>
+                <div class="card-heading-sm">Captain Shiboshi</div>
+                <p class="card-copy-xs">Earn instant ECX royalties every time your template gets remixed.</p>
+              </div>
+            </div>
+
+            <div class="support-panel">
+              <div class="panel-title">
+                <span>Remix Chain #408</span>
+                <span class="sub">+15% Creator Split</span>
+              </div>
+              <div class="remix-chain-grid">
+                <div class="remix-node">
+                  <div class="remix-thumb">v1</div>
+                  <div class="remix-label">Origin</div>
+                  <div class="remix-val">310 ECX</div>
+                </div>
+                <div class="remix-node highlighted">
+                  <div class="remix-thumb">v2</div>
+                  <div class="remix-label">Pixel</div>
+                  <div class="remix-val">640 ECX</div>
+                </div>
+                <div class="remix-node">
+                  <div class="remix-thumb">v3</div>
+                  <div class="remix-label">Moon</div>
+                  <div class="remix-val">290 ECX</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="support-panel">
+              <div class="panel-title">
+                <span>Top ECX Meme Creators</span>
+                <span class="sub">24h Payouts</span>
+              </div>
+              <div class="leaderboard-list" id="memeLeaderboardList"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- APPLICATION 2: BOUNTY GOBLINS (TOP RIGHT — REPLACED RIVAL) -->
+      <article class="app-showcase" id="app-bounties">
+        <div class="app-header">
+          <div class="app-brand-group">
+            <div class="app-mini-kicker">eCash Task & Escrow Protocol</div>
+            <h2 class="app-title">BOUNTY GOBLINS</h2>
+            <p class="app-tagline">Get things done. Earn ECX.</p>
+          </div>
+          <button type="button" class="btn-gold" data-modal-target="bountyModal">+ List Bounty</button>
+        </div>
+
+        <div class="bounty-showcase-body">
+          <!-- Smartphone Mockup showing Mobile Bounty Detail & Conditions -->
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="phone-status">
+                <span>9:41</span>
+                <div class="dynamic-island"></div>
+                <span>5G</span>
+              </div>
+
+              <div class="meme-nav-tabs">
+                <span class="meme-tab active">Browse</span>
+                <span class="meme-tab">Conditions</span>
+                <span class="meme-tab">Proof</span>
+                <span class="meme-tab">Receipt</span>
+              </div>
+
+              <div class="phone-bounty-detail" id="featuredBountyPhone">
+                <div class="bounty-detail-head">
+                  <span class="bounty-cat-badge" id="featuredBountyCat">Translation</span>
+                  <span class="bounty-price-tag" id="featuredBountyPrice">75 ECX</span>
+                </div>
+                <h3 class="bounty-phone-title" id="featuredBountyTitle">Translate the split guide into Korean</h3>
+                <p class="bounty-phone-desc" id="featuredBountyDesc">Translate the eCash split and bridge guide into Korean for our community launch.</p>
+
+                <div class="conditions-box">
+                  <div class="conditions-label">COMPLETION CONDITIONS</div>
+                  <ul class="conditions-list" id="featuredBountyConditions"></ul>
+                </div>
+
+                <button type="button" class="btn-gold full-width" id="btnClaimFeaturedBounty">Deliver Proof & Earn ECX</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Panel: Live Bounty Feed with Price & Conditions -->
+          <div class="bounty-side-column">
+            <div class="support-panel">
+              <div class="panel-title">
+                <span>Active ECX Bounties</span>
+                <span class="sub" id="bountyCountLabel">3 Open</span>
+              </div>
+              <div class="bounty-cards-stack" id="bountyShowcaseList"></div>
+            </div>
+
+            <div class="workflow-strip">
+              <span><strong>POST</strong> Bounty</span>
+              <span>→</span>
+              <span><strong>CONDITIONS</strong> Verified</span>
+              <span>→</span>
+              <span><strong>PAY</strong> Instant ECX</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== CENTER FOCAL HORIZON & BRANDING ==================== -->
+    <section class="center-horizon-hub">
+      <svg class="horizon-arc-svg" viewBox="0 0 1740 150" fill="none" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="horizonBeam" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" stop-color="#F2A51A" stop-opacity="0"/>
+            <stop offset="22%" stop-color="#8D4A22" stop-opacity="0.55"/>
+            <stop offset="50%" stop-color="#FFB52D" stop-opacity="1"/>
+            <stop offset="78%" stop-color="#8D4A22" stop-opacity="0.55"/>
+            <stop offset="100%" stop-color="#F2A51A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M 30 112 Q 870 16 1710 112" stroke="url(#horizonBeam)" stroke-width="2.5"/>
+        <path d="M 140 124 Q 870 36 1600 124" stroke="url(#horizonBeam)" stroke-width="1" opacity="0.55"/>
+      </svg>
+
+      <div class="ecash-brand-lockup">
+        <div class="ecash-title-row">
+          <svg width="44" height="44" viewBox="0 0 64 64" fill="none" class="ecash-emblem">
+            <circle cx="32" cy="32" r="27" stroke="#FFB52D" stroke-width="4.5" stroke-dasharray="138 32" stroke-linecap="round"/>
+            <circle cx="32" cy="32" r="17" stroke="#F2A51A" stroke-width="4.2" stroke-dasharray="84 26" stroke-linecap="round"/>
+            <path d="M12 32H38" stroke="#FFB52D" stroke-width="4.5" stroke-linecap="round"/>
+          </svg>
+          <h1 class="ecash-main-heading">eCash</h1>
+        </div>
+        <div class="ecash-subtitle">Consumer App Concepts</div>
+      </div>
+    </section>
+
+    <!-- ==================== BOTTOM ROW: AFTERMARK, STUBS, BLOCKHUNT ==================== -->
+    <section class="bottom-row">
+      <!-- APPLICATION 3: AFTERMARK (BOTTOM LEFT) -->
+      <article class="app-showcase" id="app-aftermark">
+        <div class="app-header">
+          <div class="app-brand-group">
+            <div class="app-mini-kicker">eCash Provenance Market</div>
+            <h2 class="app-title">AFTERMARK</h2>
+            <p class="app-tagline">Verified Resale. Zero Counterfeits.</p>
+          </div>
+          <div class="ecx-pill">On-Chain Auth</div>
+        </div>
+
+        <div class="aftermark-body">
+          <div class="phone-frame compact">
+            <div class="phone-screen">
+              <div class="phone-status">
+                <span>9:41</span>
+                <div class="dynamic-island"></div>
+                <span>5G</span>
+              </div>
+
+              <div class="watch-showcase-tile">
+                <span class="verified-seal">GENESIS #014</span>
+                <svg width="64" height="64" viewBox="0 0 80 80" fill="none">
+                  <rect x="31" y="6" width="18" height="14" rx="3" fill="#8D4A22"/>
+                  <rect x="31" y="60" width="18" height="14" rx="3" fill="#8D4A22"/>
+                  <circle cx="40" cy="40" r="24" fill="#18120E" stroke="#FFB52D" stroke-width="3"/>
+                  <path d="M40 40V27M40 40L49 45" stroke="#FFB52D" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+
+              <div class="compact-card-body">
+                <div class="split-row">
+                  <div>
+                    <div class="item-title-sm">Aether Chrono Ti</div>
+                    <div class="item-sub-xs">NFC + eCash Twin Verified</div>
+                  </div>
+                  <div class="text-right">
+                    <div class="mono-gold">1,450 ECX</div>
+                    <div class="amber-xs">+12.4% 30d</div>
+                  </div>
+                </div>
+
+                <div class="two-col-actions">
+                  <button type="button" class="btn-gold" data-toast="Escrow opened for Aether Chrono Ti (1,450 ECX)">Buy Escrow</button>
+                  <button type="button" class="btn-outline-amber" data-toast="Offer submitted to verified holder">Make Offer</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="support-panel full-width">
+            <div class="panel-title">
+              <span>Chain of Custody</span>
+              <span class="sub">3 Verified Hops</span>
+            </div>
+            <div class="custody-chain-row">
+              <span>1. Atelier Mint</span>
+              <span class="gold-bold">→</span>
+              <span>2. Vault Audit</span>
+              <span class="gold-bold">→</span>
+              <span class="ivory-bold">3. P2P Escrow</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- APPLICATION 4: STUBS — LANDSCAPE TABLET MOCKUP (BOTTOM CENTER) -->
+      <article class="app-showcase" id="app-stubs">
+        <div class="app-header">
+          <div class="app-brand-group">
+            <div class="app-mini-kicker">eCash Live Event & Ticket Protocol</div>
+            <h2 class="app-title">STUBS</h2>
+            <p class="app-tagline">Collectible Tickets. Instant Entry. Fair Resale.</p>
+          </div>
+          <div class="ecx-pill">Dynamic QR + NFC</div>
+        </div>
+
+        <div class="tablet-frame">
+          <div class="tablet-screen">
+            <div class="tablet-topbar">
+              <div class="tablet-event-title">
+                <span class="event-live-pill">LIVE EVENT</span>
+                <strong>eCash World Summit 2026 · Neo-Tokyo Dome</strong>
+              </div>
+              <span class="mono-gold">NOV 28 · 20:00 JST</span>
+            </div>
+
+            <div class="stubs-tablet-grid">
+              <div class="venue-map-panel">
+                <div>
+                  <div class="stage-arc">MAIN HOLOGRAPHIC STAGE</div>
+                  <div class="seat-header-row">
+                    <span>Select VIP Floor Seat</span>
+                    <span class="gold-bold" id="selectedSeatLabel">Selected: VIP-A4</span>
+                  </div>
+                  <div class="seat-grid" id="stubSeatGrid">
+                    <button type="button" class="seat-node taken" disabled>A1</button>
+                    <button type="button" class="seat-node" data-seat="VIP-A2" data-price="180">A2</button>
+                    <button type="button" class="seat-node" data-seat="VIP-A3" data-price="180">A3</button>
+                    <button type="button" class="seat-node selected" data-seat="VIP-A4" data-price="180">A4</button>
+                    <button type="button" class="seat-node" data-seat="VIP-A5" data-price="180">A5</button>
+                    <button type="button" class="seat-node taken" disabled>A6</button>
+                    <button type="button" class="seat-node" data-seat="VIP-B1" data-price="140">B1</button>
+                    <button type="button" class="seat-node" data-seat="VIP-B2" data-price="140">B2</button>
+                    <button type="button" class="seat-node taken" disabled>B3</button>
+                    <button type="button" class="seat-node" data-seat="VIP-B4" data-price="140">B4</button>
+                    <button type="button" class="seat-node" data-seat="VIP-B5" data-price="140">B5</button>
+                    <button type="button" class="seat-node" data-seat="VIP-B6" data-price="140">B6</button>
+                  </div>
+                </div>
+
+                <div class="seat-footer-row">
+                  <span>Anti-Scalp Cap: <strong>110% Max</strong></span>
+                  <span class="gold-bold">Instant eCash Mint</span>
+                </div>
+              </div>
+
+              <div class="collectible-stub-card">
+                <div>
+                  <div class="split-row">
+                    <span class="kicker-xs">GENESIS COLLECTIBLE PASS</span>
+                    <span class="mono-ivory" id="stubPriceTag">180 ECX</span>
+                  </div>
+                  <div class="pass-title">VIP All-Access + Backstage</div>
+                  <div class="item-sub-xs">Gate 01 · Row A · <strong class="gold-text" id="stubSeatBadge">Seat VIP-A4</strong></div>
+                </div>
+
+                <div class="stub-perforation"></div>
+
+                <div class="stub-bottom-row">
+                  <svg width="46" height="46" viewBox="0 0 48 48" class="stub-qr-svg">
+                    <rect x="4" y="4" width="14" height="14" stroke="#FFB52D" stroke-width="3" fill="none"/>
+                    <rect x="30" y="4" width="14" height="14" stroke="#FFB52D" stroke-width="3" fill="none"/>
+                    <rect x="4" y="30" width="14" height="14" stroke="#FFB52D" stroke-width="3" fill="none"/>
+                    <rect x="24" y="24" width="8" height="8" fill="#F4E6D0"/>
+                    <rect x="36" y="34" width="8" height="10" fill="#FFB52D"/>
+                  </svg>
+                  <div class="stub-cta-stack">
+                    <button type="button" class="btn-gold" data-toast="Collectible Stub minted to your on-site eCash wallet!">Mint Ticket Stub</button>
+                    <button type="button" class="btn-outline-amber" data-toast="Listed on verified P2P Stub Exchange">Instant Transfer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- APPLICATION 5: BLOCKHUNT (BOTTOM RIGHT) -->
+      <article class="app-showcase" id="app-blockhunt">
+        <div class="app-header">
+          <div class="app-brand-group">
+            <div class="app-mini-kicker">eCash Geo-Drop Discovery</div>
+            <h2 class="app-title">BLOCKHUNT</h2>
+            <p class="app-tagline">Explore. Scan. Claim ECX Drops.</p>
+          </div>
+          <div class="ecx-pill">3 Caches Near</div>
+        </div>
+
+        <div class="blockhunt-body">
+          <div class="phone-frame compact">
+            <div class="phone-screen">
+              <div class="phone-status">
+                <span>9:41</span>
+                <div class="dynamic-island"></div>
+                <span>GPS</span>
+              </div>
+
+              <div class="radar-map-canvas">
+                <div class="radar-ring ring-sm"></div>
+                <div class="radar-ring ring-md"></div>
+                <div class="radar-ring ring-lg"></div>
+                <div class="radar-beacon"></div>
+                <div class="loot-pin pin-one">50 ECX</div>
+                <div class="loot-pin pin-two">500 ECX</div>
+                <div class="loot-pin pin-three">120 ECX</div>
+              </div>
+
+              <div class="compact-card-body">
+                <div class="split-row">
+                  <div>
+                    <div class="item-title-sm">Golden Vault Cache</div>
+                    <div class="item-sub-xs">45m away · Coffee Roasters</div>
+                  </div>
+                  <span class="mono-gold">+500 ECX</span>
+                </div>
+                <button type="button" class="btn-gold full-width" data-toast="AR Scanner active! Walk 45m to unlock 500 ECX cache.">Scan & Claim Cache</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="support-panel full-width">
+            <div class="panel-title">
+              <span>Hunter Streak: 7 Days</span>
+              <span class="sub">1,340 ECX</span>
+            </div>
+            <div class="custody-chain-row">
+              <span>Caches Unlocked: <strong class="ivory-text">29</strong></span>
+              <span class="gold-bold">2x Weekend Boost</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- ==================== MODAL 1: ON-SITE ECX WALLET (SIGN-UP / IMPORT SEED) ==================== -->
+  <div class="modal-backdrop" id="walletModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="kicker-xs">NON-CUSTODIAL ON-SITE VAULT</span>
+          <h2 class="modal-title">eCash (ECX) On-Site Wallet</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal>×</button>
+      </div>
+
+      <div class="modal-tabs" id="walletModalTabs">
+        <button type="button" class="modal-tab active" data-pane="paneActiveWallet">Active Wallet</button>
+        <button type="button" class="modal-tab" data-pane="paneSignupWallet">Sign Up (Generate Seed)</button>
+        <button type="button" class="modal-tab" data-pane="paneImportWallet">Import Seed</button>
+      </div>
+
+      <!-- Pane A: Active Wallet Details -->
+      <div class="modal-pane active" id="paneActiveWallet">
+        <div class="wallet-hero-box">
+          <div>
+            <div class="item-sub-xs" id="walletOriginBadge">Generated on Sign-Up</div>
+            <div class="wallet-big-balance" id="walletBalanceDisplay">1,250 ECX</div>
+            <div class="wallet-address-line">
+              <code id="walletAddressDisplay">ecash:qp8f4a92c1e7b03d56f81294a0c3e7d19b4a8f20c1</code>
+              <button type="button" class="btn-outline-amber btn-xs" id="btnCopyAddress">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="seed-backup-card">
+          <div class="split-row">
+            <span class="kicker-xs">12-WORD RECOVERY SEED PHRASE</span>
+            <button type="button" class="btn-outline-amber btn-xs" id="btnToggleSeed">Reveal Seed</button>
+          </div>
+          <div class="seed-words-grid blurred" id="seedWordsGrid"></div>
+        </div>
+
+        <div class="tx-history-section">
+          <div class="kicker-xs">RECENT ON-CHAIN ACTIVITY</div>
+          <div class="tx-list" id="walletTxList"></div>
+        </div>
+      </div>
+
+      <!-- Pane B: Sign Up & Generate New Wallet -->
+      <form class="modal-pane form-stack" id="paneSignupWallet">
+        <p class="form-hint">Create a new eCash ecosystem account. The backend will automatically generate a cryptographic 12-word recovery seed and fund your wallet with 500 ECX.</p>
+        <label class="form-field">
+          <span>Username / Handle</span>
+          <input type="text" id="signupUsername" placeholder="@new_builder" required />
+        </label>
+        <label class="form-field">
+          <span>Display Name</span>
+          <input type="text" id="signupDisplayName" placeholder="Alex Rivera" />
+        </label>
+        <label class="form-field">
+          <span>Email (Optional)</span>
+          <input type="email" id="signupEmail" placeholder="alex@ecash.network" />
+        </label>
+        <button type="submit" class="btn-gold full-width">Create Account & Generate Wallet</button>
+      </form>
+
+      <!-- Pane C: Import Existing Seed Phrase -->
+      <form class="modal-pane form-stack" id="paneImportWallet">
+        <p class="form-hint">Restore an existing wallet by entering your 12-word or 24-word mnemonic seed phrase. Your eCash address is derived automatically on the backend.</p>
+        <label class="form-field">
+          <span>12 or 24-Word Recovery Seed Phrase</span>
+          <textarea id="importSeedInput" rows="3" placeholder="amber horizon copper goblin beacon ledger quantum fortress crystal spark summit zenith" required></textarea>
+        </label>
+        <label class="form-field">
+          <span>Account Handle (If New to Ecosystem)</span>
+          <input type="text" id="importUsernameInput" placeholder="@imported_holder" />
+        </label>
+        <button type="submit" class="btn-gold full-width">Import Wallet Seed</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 2: USER PROFILE TAB ==================== -->
+  <div class="modal-backdrop" id="profileModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="kicker-xs">ECASH IDENTITY & SOCIALS</span>
+          <h2 class="modal-title">User Profile Customization</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal>×</button>
+      </div>
+
+      <form class="form-stack" id="profileForm">
+        <div class="avatar-picker-section">
+          <div class="current-avatar-preview" id="profileAvatarPreview">G</div>
+          <div class="avatar-options-col">
+            <span class="kicker-xs">CHOOSE AVATAR PRESET</span>
+            <div class="avatar-presets-row" id="avatarPresetsRow">
+              <button type="button" class="avatar-preset-btn active" data-avatar="goblin">Goblin</button>
+              <button type="button" class="avatar-preset-btn" data-avatar="shiba">Shiboshi</button>
+              <button type="button" class="avatar-preset-btn" data-avatar="cyber">Cyber</button>
+              <button type="button" class="avatar-preset-btn" data-avatar="phoenix">Phoenix</button>
+            </div>
+            <input type="url" id="profileAvatarUrl" placeholder="Or paste custom avatar image URL (https://...)" />
+          </div>
+        </div>
+
+        <div class="two-col-form">
+          <label class="form-field">
+            <span>Display Name</span>
+            <input type="text" id="profileDisplayName" required />
+          </label>
+          <label class="form-field">
+            <span>Username Handle</span>
+            <input type="text" id="profileUsername" required />
+          </label>
+        </div>
+
+        <label class="form-field">
+          <span>Email Address</span>
+          <input type="email" id="profileEmail" />
+        </label>
+
+        <label class="form-field">
+          <span>Bio / Description</span>
+          <textarea id="profileBio" rows="2" placeholder="Tell the eCash community what you build..."></textarea>
+        </label>
+
+        <div class="kicker-xs">SOCIAL NETWORK PROFILES</div>
+        <div class="two-col-form">
+          <label class="form-field">
+            <span>X (Twitter)</span>
+            <input type="text" id="socialTwitter" placeholder="@handle" />
+          </label>
+          <label class="form-field">
+            <span>GitHub</span>
+            <input type="text" id="socialGithub" placeholder="github.com/username" />
+          </label>
+          <label class="form-field">
+            <span>Telegram</span>
+            <input type="text" id="socialTelegram" placeholder="@telegram_user" />
+          </label>
+          <label class="form-field">
+            <span>Discord</span>
+            <input type="text" id="socialDiscord" placeholder="username#0000" />
+          </label>
+        </div>
+
+        <label class="form-field">
+          <span>Personal Website / Portfolio</span>
+          <input type="url" id="socialWebsite" placeholder="https://..." />
+        </label>
+
+        <button type="submit" class="btn-gold full-width">Save Profile & Social Links</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL 3: BOUNTY BOARD (LIST + CREATE WITH PRICE & CONDITIONS) ==================== -->
+  <div class="modal-backdrop" id="bountyModal" aria-hidden="true">
+    <div class="modal-dialog modal-wide">
+      <div class="modal-header">
+        <div>
+          <span class="kicker-xs">BOUNTY GOBLINS · ON-CHAIN TASKS</span>
+          <h2 class="modal-title">List & Browse ECX Bounties</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-modal>×</button>
+      </div>
+
+      <div class="bounty-modal-grid">
+        <!-- Left: Create / List a New Bounty -->
+        <form class="form-stack bounty-create-pane" id="createBountyForm">
+          <div class="kicker-xs">POST A NEW BOUNTY</div>
+          <label class="form-field">
+            <span>Bounty Title</span>
+            <input type="text" id="bountyTitleInput" placeholder="e.g., Build eCash browser tip extension" required />
+          </label>
+
+          <div class="two-col-form">
+            <label class="form-field">
+              <span>Price / Reward (ECX)</span>
+              <input type="number" id="bountyPriceInput" min="1" placeholder="250" required />
+            </label>
+            <label class="form-field">
+              <span>Category</span>
+              <select id="bountyCategoryInput">
+                <option value="Development">Development</option>
+                <option value="Translation">Translation</option>
+                <option value="Design">Design</option>
+                <option value="Video">Video</option>
+                <option value="Research">Research</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="form-field">
+            <span>Task Description</span>
+            <textarea id="bountyDescInput" rows="2" placeholder="Describe the deliverable clearly..."></textarea>
+          </label>
+
+          <label class="form-field">
+            <span>Completion Conditions (One condition per line)</span>
+            <textarea id="bountyConditionsInput" rows="4" placeholder="Open-source MIT repository
+Supports instant ECX QR tipping
+Includes README setup guide" required></textarea>
+          </label>
+
+          <button type="submit" class="btn-gold full-width">Publish Bounty to Backend JSON</button>
+        </form>
+
+        <!-- Right: Full List of Bounties with Price & Conditions -->
+        <div class="bounty-list-pane">
+          <div class="kicker-xs">ALL LISTED BOUNTIES (PRICE & CONDITIONS)</div>
+          <div class="full-bounty-feed" id="modalBountyFeed"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ecx-toast" id="ecxToast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
